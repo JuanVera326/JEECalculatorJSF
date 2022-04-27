@@ -22,14 +22,14 @@ public class OperationsBean {
 		operaciones = new Operations();
 	}
 	
-	public void actions() {
+	public void paint() {
 		System.out.println("Actions");
 		FacesContext facesContext = FacesContext.getCurrentInstance();
 		Map params = facesContext.getExternalContext().getRequestParameterMap();
 		int action = Integer.parseInt((String) params.get("accion"));
 		
 		switch (action) {
-			case 1:setResultado(operaciones.suma(getNumero1(), getNumero2() + ""));break;
+			case 1:setResultado(operaciones.suma(getNumero1(), getNumero2())+ "");break;
 			case 2:setResultado(operaciones.resta(getNumero1(), getNumero2()) + "");break;
 			case 3:setResultado(operaciones.multp(getNumero1(), getNumero2()) + "");break;
 			case 4:double res = (operaciones.divs(getNumero1(), getNumero2()));
@@ -40,6 +40,7 @@ public class OperationsBean {
 			}break;
 		}
 	}
+
 	public double getNumero1() {
 		return numero1;
 	}

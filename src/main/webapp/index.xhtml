@@ -17,18 +17,18 @@
 			<h:panelGrid columns="1" border="1"> 
 				<h:panelGrid columns="2">
 					<h:outputLabel value="Numero 1:" for="num1" />
-					<h:inputText value="{operationsBean.numero1}" id="num1" />
+					<h:inputText value="#{operationsBean.numero1}" id="num1" />
 					<h:outputLabel value="Numero 2:" for="num2" />
-					<h:inputText value="{operationsBean.numero2}" id="num1" />
+					<h:inputText value="#{operationsBean.numero2}" id="num2" />
 					<h:outputLabel value="Resultado:" for="res" />
 					<h:outputLabel value="#{operationsBean.resultado}" />
 				</h:panelGrid>
 				
 				<h:panelGrid columns="4">
-					<h:commandButton action="#{operations-bean.actions}" value="Sumar" style="width:53px;"><f:param name="accion" value="1"/></h:commandButton>
-						<h:commandButton action="#{operations-bean.actions}" value="Restar" style="width:53px;"><f:param name="accion" value="2"/></h:commandButton>
-							<h:commandButton action="#{operations-bean.actions}" value="Mutiplicar" style="width:53px;"><f:param name="accion" value="3"/></h:commandButton>
-								<h:commandButton action="#{operations-bean.actions}" value="Dividir" style="width:53px;""><f:param name="accion" value="4"/></h:commandButton>
+					<h:commandButton action="#{operationsBean.paint()}" value="Sumar" style="width:53px;"><f:param name="accion" value="1"/></h:commandButton>
+					<h:commandButton action="#{operationsBean.paint()}" value="Restar" style="width:53px;"><f:param name="accion" value="2"/></h:commandButton>
+					<h:commandButton action="#{operationsBean.paint()}" value="Mutiplicar" style="width:53px;"><f:param name="accion" value="3"/></h:commandButton>
+					<h:commandButton action="#{operationsBean.paint()}" value="Dividir" style="width:53px;"><f:param name="accion" value="4"/></h:commandButton>
 				</h:panelGrid>
 			</h:panelGrid>
 	</h:form>
